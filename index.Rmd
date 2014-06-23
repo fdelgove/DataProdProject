@@ -1,0 +1,44 @@
+---
+title       : mtcars linear regressions
+subtitle    : project for the Developing Data Products course
+author      : f. Delgove
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## mtcars linear regressions
+
+**mtcars linear regressions** is a shiny app  
+designed to show the result of a linear  
+model predicting the number of miles per gallon (mpg).
+
+Selecting one or more predictors will produce  
+the summary of the associated linear model.
+
+--- .class #id 
+
+## Exemple
+With the variables **wt**, **qsec** and **am** selected   
+using the boxes at the left part of the web page,  
+the shiny app will produce the formula and present  
+the summary of the model.  
+
+---
+## Exemple output
+```{r}
+summary(lm(mpg~wt+qsec+am,data=mtcars))
+````
+
+---
+
+## Where ? 
+The app is hosted on the Rstudio shiny server  
+and can be launched using this link  
+
+https://frounch.shinyapps.io/dataProd
+
